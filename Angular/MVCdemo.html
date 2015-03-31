@@ -1,0 +1,14 @@
+<html ng-app>	<!--界面由Angular接管-->
+<body ng-controller="TextController"> <!--控制器-->
+	<p>{{someText}}</p> <!--双花括号插值语法-->
+
+	<script src = "D:\AngularJs\angular-1.2.19\angular.js">
+	</script>
+
+	<script>
+		function TextController($scope){ //进行数据绑定的对象
+			$scope.someText = 'You have started your journey.';
+		}
+	</script>
+</body>
+</html>
