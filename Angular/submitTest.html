@@ -1,0 +1,24 @@
+<html ng-app>
+<body>
+	<form ng-submit="requestFunding()" ng-controller="StartUpController"> 
+		Starting:<input ng-change="computerNeeded()" ng-model="StartingEstimate">
+		Recommendation:{{needed}};
+		<button>Fund my startup!</button>
+		<button ng-click="reset()">Reset</button>
+	</form>
+	<script src="D:\AngularJs\angular-1.2.19\angular.js"></script>
+	<script>
+		function StartUpController($scope){
+			$scope.computerNeeded = function(){
+				$scope.needed = $scope.StartingEstimate * 10;
+			};
+			$scope.requestFunding = function(){
+				window.alert("Sorry,please get more customers first!");
+			};
+			$scope.reset = function(){
+				$scope.StartingEstimate = 0;
+			}
+		}
+	</script>
+</body>
+</html>

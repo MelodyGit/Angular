@@ -1,0 +1,18 @@
+<html ng-app>
+<body>
+	<ul ng-controller="StudentListController">
+		<li ng-repeat = 'student in students'>
+			<a href='/student/view/{{student.id}}'>{{student.name}}</a>
+		</li>
+	</ul>
+	<script src="D:\AngularJs\angular-1.2.19\angular.js"></script>
+	<script>
+		var students = [{name:'Mary',id:'1'},
+						{name:'Jack',id:'2'},
+						{name:'Jill Hill',id:'3'}];
+		function StudentListController($scope) {
+			$scope.students = students;
+		}
+	</script>
+</body>
+</html>
