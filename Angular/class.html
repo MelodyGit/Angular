@@ -1,0 +1,30 @@
+<html ng-app>
+<head>
+	<link rel="stylesheet" href="test.css">
+	<script src="D:\AngularJs\angular-1.2.19\angular.js"></script>
+</head>
+<body>
+	<div ng-controller='HeaderController'>
+		<div ng-class='{error:isError,warning:isWarning}'>{{messageText}}</div>
+		<button ng-click='showError()'>Simulate Error</button>
+		<button ng-click='showWarning()'>Simulate Warning</button>
+	</div>
+	<script type="text/javascript">
+		function HeaderController($scope){
+			$scope.isError = false;
+			$scope.isWarning = false;
+
+			$scope.showError = function(){
+				$scope.messageText = 'This is an error!';
+				$scope.isError = true;
+				$scope.isWarning = false;
+			};
+			$scope.showWarning = function(){
+				$scope.messageText = 'Just a warning.Please carray on.';
+				$scope.isWarning = true;
+				$scope.isError = false;
+			};
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html ng-app>
+<body>
+	<div ng-controller='DeathrayMenuController'>
+		<button ng-click='toggleMenu()'>Toggle Menu</button>
+		<ul ng-show='menuState'>
+			<li ng-click='stun()'>Stun</li>
+			<li ng-click='disintergrate()'>Disintegrate</li>
+			<li ng-click='erase()'>Erase from history</li>
+		</ul>
+	</div>
+	<script src="D:\AngularJs\angular-1.2.19\angular.js"></script>
+	<script>
+		function DeathrayMenuController($scope){
+			$scope.menuState = false;
+			$scope.toggleMenu = function(){
+				$scope.menuState =! $scope.menuState;
+			};
+		}
+	</script>
+</body>
+</html>
