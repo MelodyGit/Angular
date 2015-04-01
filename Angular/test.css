@@ -1,0 +1,9 @@
+.error {
+	background: red;
+}
+.warning {
+	background: yellow;
+}
+.selected {
+	background: lightgreen;
+}
