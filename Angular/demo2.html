@@ -1,0 +1,18 @@
+<html ng-app>
+<body>
+	<form ng-controller="StartUpController">
+		Starting:<input ng-change="computerNeeded()" ng-model="funding.startingEstimate">
+		Recommendation:{{funding.needed}};
+	</form>
+	<script src = "D:\AngularJs\angular-1.2.19\angular.js"></script>
+
+	<script>
+		function StartUpController($scope) {
+			$scope.funding = {startingEstimate:0};
+			computerNeeded = function(){
+				$scope.funding.needed = $scope.funding.startingEstimate * 10;
+			}
+			$scope.$watch('funding.startingEstimate',computerNeeded); //监听函数  funding.startingEstimate发生变化，funding.needed自动刷新。
+		} 
+	</script>
+</body>
